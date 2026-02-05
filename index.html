@@ -50,7 +50,7 @@ header.scrolled{
   height:70px;
 }
 
-/* NAV */
+/* ===== NAV ===== */
 .nav{
   background:#e6efff;
   padding:10px 26px;
@@ -63,9 +63,15 @@ header.scrolled{
   font-size:15px;
   font-weight:500;
   color:#0a1a2f;
+  display:inline-block;
+  transition:transform 0.25s ease;   /* TEXT ZOOM */
 }
 
-/* ===== BUTTONS ===== */
+.nav a:hover{
+  transform:scale(1.12);
+}
+
+/* ===== BUTTONS (UNCHANGED) ===== */
 .hire-btn,
 .cta{
   background:#0a3cff;
@@ -103,24 +109,24 @@ header.scrolled{
   grid-template-columns:1fr 1.2fr;
   gap:70px;
   align-items:center;
+  animation:fadeUp 1s ease forwards;
 }
 
-/* IMAGE (NO ANIMATION NOW) */
+/* ===== IMAGE (RESTORED OLD STYLE) ===== */
 .hero-img{
   background:#e6efff;
   border-radius:36px;
   padding:38px;
   position:relative;
+  animation:float 4s ease-in-out infinite;   /* BACK */
 }
 
-/* THIN BLUE SURROUND */
 .hero-img::after{
   content:"";
   position:absolute;
-  inset:-6px;            /* thinner */
-  border-radius:40px;
-  border:1.5px solid rgba(10,60,255,0.25);
-  background:none;
+  inset:-18px;
+  border-radius:50px;
+  background:rgba(10,60,255,0.06);          /* SOFT GLOW BACK */
   z-index:-1;
 }
 
@@ -129,7 +135,7 @@ header.scrolled{
   border-radius:28px;
 }
 
-/* TEXT */
+/* ===== TEXT ===== */
 .hero-content h1{
   font-size:64px;
   line-height:1.05;
@@ -191,7 +197,7 @@ header.scrolled{
   line-height:1.6;
 }
 
-/* STATS */
+/* ===== STATS ===== */
 .stats{
   margin-top:70px;
   display:grid;
@@ -209,6 +215,16 @@ header.scrolled{
 }
 
 /* ===== ANIMATIONS ===== */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
 @keyframes pulse{
   0%{box-shadow:0 0 0 0 rgba(10,60,255,0.45);}
   70%{box-shadow:0 0 0 18px rgba(10,60,255,0);}
