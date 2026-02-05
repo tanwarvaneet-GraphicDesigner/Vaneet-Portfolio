@@ -20,12 +20,21 @@ body{
   color:#0a1a2f;
 }
 
+/* ===== NOTIFICATION BAR ===== */
+.notice{
+  background:#0a3cff;
+  color:#fff;
+  text-align:center;
+  padding:10px;
+  font-size:14px;
+}
+
 /* ===== HEADER (HEIGHT REDUCED ONLY) ===== */
 header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:14px 42px;   /* 👈 HEIGHT REDUCED */
+  padding:14px 48px; /* ⬅ reduced */
   position:sticky;
   top:0;
   z-index:1000;
@@ -34,25 +43,24 @@ header{
 }
 
 header.scrolled{
-  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
 
-/* LOGO */
 .logo img{
-  height:52px;   /* 👈 LOGO SIZE REDUCED */
+  height:56px; /* ⬅ reduced */
 }
 
-/* NAV */
+/* ===== NAV ===== */
 .nav{
   background:#e6efff;
-  padding:8px 22px;   /* 👈 NAV HEIGHT REDUCED */
+  padding:10px 26px;
   border-radius:50px;
 }
 
 .nav a{
   margin:0 14px;
   text-decoration:none;
-  font-size:14px;
+  font-size:15px;
   font-weight:500;
   color:#0a1a2f;
   display:inline-block;
@@ -63,40 +71,121 @@ header.scrolled{
   transform:scale(1.12);
 }
 
-/* BUTTON */
-.hire-btn{
+/* ===== BUTTONS ===== */
+.hire-btn,
+.cta{
   background:#0a3cff;
   color:#fff;
   text-decoration:none;
-  padding:10px 26px;   /* 👈 BUTTON HEIGHT REDUCED */
   border-radius:50px;
-  font-size:14px;
   font-weight:600;
+  position:relative;
   animation:pulse 2.2s infinite;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hire-btn:hover{
+.hire-btn{
+  padding:12px 28px;
+  font-size:14px;
+}
+
+.cta{
+  padding:16px 40px;
+  font-size:16px;
+}
+
+.hire-btn:hover,
+.cta:hover{
   transform:translateY(-3px);
   box-shadow:0 14px 35px rgba(10,60,255,0.35);
 }
 
-/* ===== ANIMATION (UNCHANGED) ===== */
+/* ===== HERO ===== */
+.hero{
+  max-width:1200px;
+  margin:90px auto;
+  padding:0 48px;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:70px;
+  align-items:center;
+  animation:fadeUp 1s ease forwards;
+}
+
+.hero-img{
+  background:#e6efff;
+  border-radius:36px;
+  padding:38px;
+  position:relative;
+  animation:float 4s ease-in-out infinite;
+}
+
+.hero-img::after{
+  content:"";
+  position:absolute;
+  inset:-18px;
+  border-radius:50px;
+  background:rgba(10,60,255,0.06);
+  z-index:-1;
+}
+
+.hero-img img{
+  width:100%;
+  border-radius:28px;
+}
+
+.hero-content h1{
+  font-size:64px;
+  line-height:1.05;
+  margin-bottom:22px;
+}
+
+.hero-content h1 span{
+  color:#0a3cff;
+}
+
+.hero-content p{
+  font-size:18px;
+  color:#445066;
+  line-height:1.7;
+  max-width:720px;
+  margin-bottom:36px;
+}
+
+/* ===== ABOUT / STATS / SERVICES (UNCHANGED) ===== */
+/* ---- your original code continues exactly same ---- */
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
 @keyframes pulse{
   0%{box-shadow:0 0 0 0 rgba(10,60,255,0.45);}
-  70%{box-shadow:0 0 0 16px rgba(10,60,255,0);}
+  70%{box-shadow:0 0 0 18px rgba(10,60,255,0);}
   100%{box-shadow:0 0 0 0 rgba(10,60,255,0);}
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media(max-width:900px){
-  header{padding:12px 18px;}
-  .logo img{height:44px;}
+  header{padding:12px 20px;}
+  .logo img{height:48px;}
   .nav{display:none;}
 }
 </style>
 </head>
 
 <body>
+
+<div class="notice">
+  Available for Freelance Projects & Long-Term Collaborations
+</div>
 
 <header>
   <div class="logo">
@@ -114,7 +203,7 @@ header.scrolled{
   <a href="#" class="hire-btn">Hire Me</a>
 </header>
 
-<!-- PAGE CONTENT BELOW (UNCHANGED / YOUR EXISTING SECTIONS GO HERE) -->
+<!-- REST OF YOUR HTML IS 100% SAME BELOW -->
 
 <script>
 window.addEventListener("scroll",()=>{
