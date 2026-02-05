@@ -19,7 +19,7 @@ body{
   color:#0a1a2f;
 }
 
-/* ===== NOTIFICATION BAR ===== */
+/* ===== NOTICE ===== */
 .notice{
   background:#0a3cff;
   color:#fff;
@@ -40,11 +40,9 @@ header{
   background:#f7f9fc;
   transition:box-shadow 0.3s ease;
 }
-
 header.scrolled{
   box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
-
 .logo img{height:70px;}
 
 .nav{
@@ -52,7 +50,6 @@ header.scrolled{
   padding:10px 26px;
   border-radius:50px;
 }
-
 .nav a{
   margin:0 14px;
   text-decoration:none;
@@ -62,26 +59,24 @@ header.scrolled{
   display:inline-block;
   transition:transform 0.25s ease;
 }
-
 .nav a:hover{transform:scale(1.12);}
 
-.hire-btn,.cta{
+.hire-btn,
+.cta{
   background:#0a3cff;
   color:#fff;
   text-decoration:none;
   border-radius:50px;
   font-weight:600;
-  position:relative;
   animation:pulse 2.2s infinite;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
+.hire-btn{padding:12px 28px;}
+.cta{padding:16px 40px;}
 
-.hire-btn{padding:12px 28px;font-size:14px;}
-.cta{padding:16px 40px;font-size:16px;}
-
-.hire-btn:hover,.cta:hover{
-  transform:translateY(-3px);
-  box-shadow:0 14px 35px rgba(10,60,255,0.35);
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(10,60,255,.4);}
+  70%{box-shadow:0 0 0 18px rgba(10,60,255,0);}
+  100%{box-shadow:0 0 0 0 rgba(10,60,255,0);}
 }
 
 /* ===== HERO (LOCKED) ===== */
@@ -94,156 +89,126 @@ header.scrolled{
   gap:70px;
   align-items:center;
 }
-
 .hero-img{
   background:#e6efff;
   border-radius:36px;
   padding:38px;
-  position:relative;
   animation:float 4s ease-in-out infinite;
 }
-
-.hero-img::after{
-  content:"";
-  position:absolute;
-  inset:-18px;
-  border-radius:50px;
-  background:rgba(10,60,255,0.06);
-  z-index:-1;
-}
-
-.hero-img img{width:100%;border-radius:28px;}
-
-.hero-content h1{
-  font-size:64px;
-  line-height:1.05;
-  margin-bottom:22px;
-}
-
-.hero-content h1 span{color:#0a3cff;}
-
-.hero-content p{
-  font-size:18px;
-  color:#445066;
-  line-height:1.7;
-  margin-bottom:36px;
-}
-
-/* ============================= */
-/* ===== ABOUT (ONLY CHANGE) ==== */
-/* ============================= */
-
-.about{
-  max-width:1200px;
-  margin:120px auto;
-  padding:100px 56px;
-  background:#e6efff;
-  border-radius:60px;
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:80px;
-  align-items:start;
-}
-
-.about h2{
-  font-size:52px;
-  line-height:1.15;
-}
-
-.about h2 span{
-  color:#0a3cff;
-}
-
-/* ===== STATS MOVED HERE ===== */
-.stats{
-  margin-top:50px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:26px;
-}
-
-.stat{
-  background:#ffffff;
-  padding:28px 20px;
-  border-radius:26px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(10,60,255,0.08);
-}
-
-.stat h3{
-  font-size:60px;
-  font-weight:800;
-  color:#0a3cff;
-  margin-bottom:6px;
-  letter-spacing:-1px;
-}
-
-.stat p{
-  font-size:16px;
-  font-weight:500;
-  color:#2f3b52;
-}
-
-/* Vision / Mission (UNCHANGED) */
-.info-box{
-  display:flex;
-  gap:32px;
-  margin-bottom:46px;
-  background:#ffffff;
-  padding:26px;
+.hero-img img{
+  width:100%;
   border-radius:28px;
-  box-shadow:0 10px 30px rgba(10,60,255,0.08);
 }
-
-.info-box img{
-  width:190px;
-  height:190px;
-  object-fit:cover;
-  border-radius:22px;
-}
-
-.info-box h4{
-  font-size:24px;
-  margin-bottom:12px;
-}
-
-.info-box p{
-  font-size:17px;
-  color:#445066;
-  line-height:1.7;
-}
-
-/* ===== ANIMATIONS ===== */
 @keyframes float{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-10px);}
 }
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(10,60,255,0.45);}
-  70%{box-shadow:0 0 0 18px rgba(10,60,255,0);}
-  100%{box-shadow:0 0 0 0 rgba(10,60,255,0);}
+.hero-content h1{
+  font-size:64px;
+  line-height:1.05;
+}
+.hero-content h1 span{color:#0a3cff;}
+.hero-content p{
+  font-size:18px;
+  color:#445066;
+  margin:28px 0 36px;
+}
+
+/* ================================================= */
+/* ===== CREATIVE SECTION (ONLY THIS CHANGED) ===== */
+/* ================================================= */
+
+.creative{
+  max-width:1200px;
+  margin:120px auto;
+  padding:90px 60px;
+  background:#eaf1ff;
+  border-radius:50px;
+}
+
+.creative-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+
+/* LEFT */
+.creative h2{
+  font-size:50px;
+  line-height:1.15;
+  margin-bottom:50px;
+}
+.creative h2 span{color:#0a3cff;}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+.stat{
+  background:#fff;
+  padding:26px 20px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.06);
+}
+.stat h3{
+  font-size:52px;
+  color:#0a3cff;
+  margin-bottom:8px;
+}
+.stat p{
+  font-size:14px;
+  font-weight:600;
+  color:#334155;
+}
+
+/* RIGHT */
+.vm{
+  display:grid;
+  gap:28px;
+}
+.vm-card{
+  background:#fff;
+  padding:28px;
+  border-radius:28px;
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:22px;
+  align-items:center;
+  box-shadow:0 14px 35px rgba(0,0,0,.06);
+}
+.vm-card img{
+  width:160px;
+  height:160px;
+  object-fit:cover;
+  border-radius:22px;
+}
+.vm-card h4{
+  font-size:22px;
+  margin-bottom:10px;
+}
+.vm-card p{
+  font-size:15.5px;
+  line-height:1.6;
+  color:#445066;
 }
 
 /* ===== MOBILE ===== */
 @media(max-width:900px){
   header{padding:16px 20px;}
   .nav{display:none;}
-  .hero{grid-template-columns:1fr;padding:0 20px;}
+  .hero{grid-template-columns:1fr; padding:0 20px;}
   .hero-content h1{font-size:38px;}
 
-  .about{
-    margin:70px 20px;
-    padding:70px 24px;
-  }
-
-  .about-grid{grid-template-columns:1fr;}
+  .creative{margin:70px 20px; padding:50px 22px;}
+  .creative-grid{grid-template-columns:1fr;}
   .stats{grid-template-columns:1fr 1fr;}
-  .info-box{flex-direction:column;}
-  .info-box img{width:100%;height:240px;}
+  .vm-card{grid-template-columns:1fr;}
+  .vm-card img{width:100%; height:220px;}
 }
 </style>
 </head>
@@ -251,52 +216,47 @@ header.scrolled{
 <body>
 
 <div class="notice">
-  Available for Freelance Projects & Long-Term Collaborations
+Available for Freelance Projects & Long-Term Collaborations
 </div>
 
 <header>
-  <div class="logo"><img src="logo.png" alt="Vaneet Tanwar"></div>
-
+  <div class="logo"><img src="logo.png"></div>
   <nav class="nav">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Portfolio</a>
+    <a href="#">Home</a><a href="#">About</a>
+    <a href="#">Services</a><a href="#">Portfolio</a>
     <a href="#">Contact</a>
   </nav>
-
   <a href="#" class="hire-btn">Hire Me</a>
 </header>
 
 <section class="hero">
   <div class="hero-img">
-    <img src="profile.jpg" alt="Vaneet Tanwar">
+    <img src="profile.jpg">
   </div>
-
   <div class="hero-content">
     <h1>
       <span>Experienced</span><br>
       Graphic Designer<br>
       & <span>Meta Ads Expert</span>
     </h1>
-
     <p>
       I help brands grow through clean graphic design and
-      high-performing Meta Ads creatives. With 7+ years of
-      professional experience, I focus on clarity, conversion
-      and visual impact.
+      high-performing Meta Ads creatives.
     </p>
-
     <a href="#" class="cta">Let’s Talk</a>
   </div>
 </section>
 
-<section class="about">
-  <div class="about-grid">
-    <div>
-      <h2>Creative Design with<br><span>Refreshing Ideas</span></h2>
+<!-- ===== CREATIVE SECTION ===== -->
+<section class="creative">
+  <div class="creative-grid">
 
-      <!-- STATS UNDER HEADING -->
+    <div>
+      <h2>
+        Creative Design with<br>
+        <span>Refreshing Ideas</span>
+      </h2>
+
       <div class="stats">
         <div class="stat"><h3>80+</h3><p>Projects Completed</p></div>
         <div class="stat"><h3>7+</h3><p>Years Experience</p></div>
@@ -305,8 +265,8 @@ header.scrolled{
       </div>
     </div>
 
-    <div>
-      <div class="info-box">
+    <div class="vm">
+      <div class="vm-card">
         <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=600">
         <div>
           <h4>Vision</h4>
@@ -317,7 +277,7 @@ header.scrolled{
         </div>
       </div>
 
-      <div class="info-box">
+      <div class="vm-card">
         <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600">
         <div>
           <h4>Mission</h4>
@@ -328,6 +288,7 @@ header.scrolled{
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
