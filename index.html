@@ -6,6 +6,7 @@
 <title>Vaneet Tanwar | Graphic Designer & Meta Ads Expert</title>
 
 <style>
+/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
@@ -19,12 +20,21 @@ body{
   color:#0a1a2f;
 }
 
+/* ===== NOTIFICATION BAR ===== */
+.notice{
+  background:#0a3cff;
+  color:#fff;
+  text-align:center;
+  padding:10px;
+  font-size:14px;
+}
+
 /* ===== HEADER ===== */
 header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:24px 48px;
+  padding:22px 48px;
   position:sticky;
   top:0;
   z-index:1000;
@@ -33,13 +43,14 @@ header{
 }
 
 header.scrolled{
-  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+  box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
 
 .logo img{
   height:70px;
 }
 
+/* NAV */
 .nav{
   background:#e6efff;
   padding:10px 26px;
@@ -54,6 +65,7 @@ header.scrolled{
   color:#0a1a2f;
 }
 
+/* BUTTON */
 .hire-btn{
   background:#0a3cff;
   color:#fff;
@@ -62,30 +74,50 @@ header.scrolled{
   border-radius:50px;
   font-size:14px;
   font-weight:600;
+  transition:all 0.3s ease;
+}
+
+.hire-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(10,60,255,0.35);
 }
 
 /* ===== HERO ===== */
 .hero{
   max-width:1200px;
-  margin:80px auto;
+  margin:90px auto;
   padding:0 48px;
   display:grid;
   grid-template-columns:1fr 1.2fr;
-  gap:60px;
+  gap:70px;
   align-items:center;
+  animation:fadeUp 1s ease forwards;
 }
 
+/* IMAGE */
 .hero-img{
   background:#e6efff;
-  border-radius:32px;
-  padding:36px;
+  border-radius:36px;
+  padding:38px;
+  position:relative;
+  animation:float 4s ease-in-out infinite;
+}
+
+.hero-img::after{
+  content:"";
+  position:absolute;
+  inset:-20px;
+  border-radius:50px;
+  background:rgba(10,60,255,0.06);
+  z-index:-1;
 }
 
 .hero-img img{
   width:100%;
-  border-radius:26px;
+  border-radius:28px;
 }
 
+/* TEXT */
 .hero-content h1{
   font-size:64px;
   line-height:1.05;
@@ -109,48 +141,49 @@ header.scrolled{
   background:#0a3cff;
   color:#fff;
   text-decoration:none;
-  padding:16px 38px;
+  padding:16px 40px;
   border-radius:40px;
   font-size:16px;
   font-weight:600;
+  transition:all 0.3s ease;
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 35px rgba(10,60,255,0.35);
 }
 
 /* ===== ABOUT ===== */
 .about{
   max-width:1200px;
-  margin:100px auto;
-  padding:80px 48px;
+  margin:120px auto;
+  padding:90px 48px;
   background:#e6efff;
-  border-radius:40px;
+  border-radius:50px;
+  animation:fadeUp 1.2s ease forwards;
 }
 
 .about-grid{
   display:grid;
   grid-template-columns:1.2fr 1fr;
-  gap:60px;
+  gap:70px;
 }
 
 .about h2{
   font-size:48px;
-  margin-bottom:20px;
-}
-
-.about-right{
-  display:grid;
-  gap:44px;
 }
 
 .info-box{
   display:flex;
-  gap:24px;
-  align-items:flex-start;
+  gap:28px;
+  margin-bottom:40px;
 }
 
 .info-box img{
-  width:150px;
-  height:150px;
+  width:170px;
+  height:170px;
   object-fit:cover;
-  border-radius:22px;
+  border-radius:26px;
 }
 
 .info-box h4{
@@ -164,7 +197,7 @@ header.scrolled{
   line-height:1.6;
 }
 
-/* ===== STATS ===== */
+/* STATS */
 .stats{
   margin-top:70px;
   display:grid;
@@ -178,63 +211,41 @@ header.scrolled{
 }
 
 .stat p{
-  margin-top:8px;
   font-size:15px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
 }
 
 /* ===== MOBILE ===== */
 @media(max-width:900px){
-
-  header{
-    padding:16px 20px;
-  }
-
-  .logo img{
-    height:56px;
-  }
-
-  .nav{
-    display:none;
-  }
-
-  .hero{
-    grid-template-columns:1fr;
-    gap:40px;
-    margin:40px auto;
-    padding:0 20px;
-  }
-
-  .hero-content h1{
-    font-size:38px;
-  }
-
-  .about{
-    padding:60px 20px;
-    margin:60px 20px;
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .info-box{
-    flex-direction:column;
-  }
-
-  .info-box img{
-    width:100%;
-    height:220px;
-  }
-
-  .stats{
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-  }
+  header{padding:16px 20px;}
+  .logo img{height:56px;}
+  .nav{display:none;}
+  .hero{grid-template-columns:1fr; gap:40px; padding:0 20px;}
+  .hero-content h1{font-size:38px;}
+  .about{margin:70px 20px; padding:60px 20px;}
+  .about-grid{grid-template-columns:1fr;}
+  .info-box{flex-direction:column;}
+  .info-box img{width:100%; height:220px;}
+  .stats{grid-template-columns:1fr 1fr; gap:30px;}
 }
 </style>
 </head>
 
 <body>
+
+<div class="notice">
+  Available for Freelance Projects & Long-Term Collaborations
+</div>
 
 <header>
   <div class="logo">
@@ -265,10 +276,10 @@ header.scrolled{
     </h1>
 
     <p>
-      I am a professional Graphic Designer and Meta Ads Expert with over
-      7 years of experience working with brands, startups, and agencies.
-      I design clean visuals and high-performing ad creatives that help
-      businesses grow.
+      I help brands grow through clean graphic design and
+      high-performing Meta Ads creatives. With 7+ years of
+      professional experience, I focus on clarity, conversion
+      and visual impact.
     </p>
 
     <a href="#" class="cta">Let’s Talk</a>
@@ -281,14 +292,14 @@ header.scrolled{
       <h2>Creative Design with<br>Refreshing Ideas</h2>
     </div>
 
-    <div class="about-right">
+    <div>
       <div class="info-box">
         <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=600">
         <div>
           <h4>Vision</h4>
           <p>
-            To help brands stand out through clean, modern and
-            conversion-focused design that builds trust and clarity.
+            To help brands stand out with modern, clean and
+            conversion-driven visual design.
           </p>
         </div>
       </div>
@@ -298,8 +309,8 @@ header.scrolled{
         <div>
           <h4>Mission</h4>
           <p>
-            To deliver high-quality graphic design and Meta Ads creatives
-            that support business growth and real-world results.
+            To deliver high-quality graphic design and Meta Ads
+            creatives that generate measurable business growth.
           </p>
         </div>
       </div>
@@ -307,29 +318,17 @@ header.scrolled{
   </div>
 
   <div class="stats">
-    <div class="stat">
-      <h3>80+</h3>
-      <p>Projects Completed</p>
-    </div>
-    <div class="stat">
-      <h3>7+</h3>
-      <p>Years Experience</p>
-    </div>
-    <div class="stat">
-      <h3>75+</h3>
-      <p>Happy Clients</p>
-    </div>
-    <div class="stat">
-      <h3>4+</h3>
-      <p>Industries Served</p>
-    </div>
+    <div class="stat"><h3>80+</h3><p>Projects Completed</p></div>
+    <div class="stat"><h3>7+</h3><p>Years Experience</p></div>
+    <div class="stat"><h3>75+</h3><p>Happy Clients</p></div>
+    <div class="stat"><h3>4+</h3><p>Industries Served</p></div>
   </div>
 </section>
 
 <script>
-window.addEventListener("scroll", function(){
-  const header = document.querySelector("header");
-  header.classList.toggle("scrolled", window.scrollY > 10);
+window.addEventListener("scroll",()=>{
+  document.querySelector("header")
+  .classList.toggle("scrolled",window.scrollY>10);
 });
 </script>
 
