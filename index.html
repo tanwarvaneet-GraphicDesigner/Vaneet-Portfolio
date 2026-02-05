@@ -35,14 +35,14 @@ header{
   height:68px;
 }
 
-/* NAV PILL (OLD STYLE) */
+/* NAV PILL (DEFAULT STATE) */
 .nav-pill{
   display:flex;
   gap:30px;
   background:#e9f1ff;
   padding:14px 34px;
   border-radius:50px;
-  animation:navEnter 0.9s ease forwards;
+  transition:background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-pill a{
@@ -54,6 +54,12 @@ header{
 
 .nav-pill a:hover{
   color:#1e5eff;
+}
+
+/* NAV PILL ON SCROLL */
+.nav-pill.scrolled{
+  background:#ffffff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* HIRE BUTTON */
@@ -89,7 +95,6 @@ header{
 .hero h1{
   font-size:56px;
   line-height:1.1;
-  animation:fadeUp 1s ease;
 }
 
 .hero h1 span{
@@ -101,7 +106,6 @@ header{
   font-size:18px;
   max-width:520px;
   color:#555;
-  animation:fadeUp 1.2s ease;
 }
 
 .hero .btn{
@@ -113,7 +117,6 @@ header{
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
-  animation:pulse 2s infinite;
 }
 
 /* ================= ABOUT ================= */
@@ -148,7 +151,6 @@ header{
   gap:26px;
   margin-bottom:32px;
   box-shadow:0 25px 45px rgba(0,0,0,0.08);
-  animation:fadeUp 1s ease;
 }
 
 .card img{
@@ -182,7 +184,6 @@ header{
   padding:34px;
   border-radius:26px;
   box-shadow:0 20px 40px rgba(0,0,0,0.08);
-  animation:fadeUp 1.2s ease;
 }
 
 .stat h4{
@@ -196,25 +197,9 @@ header{
 }
 
 /* ================= ANIMATIONS ================= */
-@keyframes navEnter{
-  from{opacity:0; transform:translateY(-15px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
 @keyframes float{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-12px);}
-}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(30,94,255,0.5);}
-  70%{box-shadow:0 0 0 18px rgba(30,94,255,0);}
-  100%{box-shadow:0 0 0 0 rgba(30,94,255,0);}
 }
 
 /* ================= MOBILE ================= */
@@ -264,7 +249,7 @@ header{
     <img src="logo.png" alt="Vaneet Tanwar">
   </div>
 
-  <nav class="nav-pill">
+  <nav class="nav-pill" id="navPill">
     <a href="#">Home</a>
     <a href="#">About</a>
     <a href="#">Services</a>
@@ -323,6 +308,18 @@ header{
     <div class="stat"><h4>4+</h4><p>Industries Served</p></div>
   </div>
 </section>
+
+<script>
+const navPill = document.getElementById("navPill");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    navPill.classList.add("scrolled");
+  } else {
+    navPill.classList.remove("scrolled");
+  }
+});
+</script>
 
 </body>
 </html>
