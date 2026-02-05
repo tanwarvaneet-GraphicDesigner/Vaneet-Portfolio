@@ -106,7 +106,7 @@ header.scrolled{
 
 .cta{
   display:inline-block;
-  background:#ff7a33;
+  background:#0a3cff;
   color:#fff;
   text-decoration:none;
   padding:16px 38px;
@@ -115,7 +115,7 @@ header.scrolled{
   font-weight:600;
 }
 
-/* ===== ABOUT SECTION ===== */
+/* ===== ABOUT ===== */
 .about{
   max-width:1200px;
   margin:100px auto;
@@ -137,34 +137,36 @@ header.scrolled{
 
 .about-right{
   display:grid;
-  gap:36px;
+  gap:44px;
 }
 
 .info-box{
   display:flex;
-  gap:20px;
+  gap:24px;
   align-items:flex-start;
 }
 
 .info-box img{
-  width:110px;
-  border-radius:18px;
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:22px;
 }
 
 .info-box h4{
-  font-size:20px;
-  margin-bottom:8px;
+  font-size:22px;
+  margin-bottom:10px;
 }
 
 .info-box p{
-  font-size:15px;
+  font-size:16px;
   color:#445066;
   line-height:1.6;
 }
 
 /* ===== STATS ===== */
 .stats{
-  margin-top:60px;
+  margin-top:70px;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   text-align:center;
@@ -172,13 +174,12 @@ header.scrolled{
 
 .stat h3{
   font-size:56px;
-  color:#ff7a33;
+  color:#0a3cff;
 }
 
 .stat p{
   margin-top:8px;
   font-size:15px;
-  color:#0a1a2f;
 }
 
 /* ===== MOBILE ===== */
@@ -214,6 +215,15 @@ header.scrolled{
 
   .about-grid{
     grid-template-columns:1fr;
+  }
+
+  .info-box{
+    flex-direction:column;
+  }
+
+  .info-box img{
+    width:100%;
+    height:220px;
   }
 
   .stats{
@@ -257,7 +267,8 @@ header.scrolled{
     <p>
       I am a professional Graphic Designer and Meta Ads Expert with over
       7 years of experience working with brands, startups, and agencies.
-      I design visuals and ad creatives that help businesses grow.
+      I design clean visuals and high-performing ad creatives that help
+      businesses grow.
     </p>
 
     <a href="#" class="cta">Let’s Talk</a>
@@ -272,23 +283,23 @@ header.scrolled{
 
     <div class="about-right">
       <div class="info-box">
-        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=400">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=600">
         <div>
           <h4>Vision</h4>
           <p>
-            To help brands stand out through clean, meaningful and
-            conversion-focused design that creates real impact.
+            To help brands stand out through clean, modern and
+            conversion-focused design that builds trust and clarity.
           </p>
         </div>
       </div>
 
       <div class="info-box">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600">
         <div>
           <h4>Mission</h4>
           <p>
             To deliver high-quality graphic design and Meta Ads creatives
-            that support brand growth and measurable results.
+            that support business growth and real-world results.
           </p>
         </div>
       </div>
