@@ -55,6 +55,7 @@ header.scrolled{
   background:#e6efff;
   padding:10px 26px;
   border-radius:50px;
+  animation:navFade 0.8s ease forwards;
 }
 
 .nav a{
@@ -63,6 +64,28 @@ header.scrolled{
   font-size:15px;
   font-weight:500;
   color:#0a1a2f;
+  position:relative;
+  transition:color 0.3s ease;
+}
+
+/* underline slide animation */
+.nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:#0a3cff;
+  transition:width 0.3s ease;
+}
+
+.nav a:hover{
+  color:#0a3cff;
+}
+
+.nav a:hover::after{
+  width:100%;
 }
 
 /* BUTTON */
@@ -74,12 +97,12 @@ header.scrolled{
   border-radius:50px;
   font-size:14px;
   font-weight:600;
-  transition:all 0.3s ease;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hire-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 30px rgba(10,60,255,0.35);
+  transform:translateY(-3px);
+  box-shadow:0 12px 30px rgba(10,60,255,0.35);
 }
 
 /* ===== HERO ===== */
@@ -136,6 +159,7 @@ header.scrolled{
   margin-bottom:36px;
 }
 
+/* CTA */
 .cta{
   display:inline-block;
   background:#0a3cff;
@@ -145,11 +169,11 @@ header.scrolled{
   border-radius:40px;
   font-size:16px;
   font-weight:600;
-  transition:all 0.3s ease;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta:hover{
-  transform:translateY(-2px);
+  transform:translateY(-4px);
   box-shadow:0 14px 35px rgba(10,60,255,0.35);
 }
 
@@ -160,7 +184,6 @@ header.scrolled{
   padding:90px 48px;
   background:#e6efff;
   border-radius:50px;
-  animation:fadeUp 1.2s ease forwards;
 }
 
 .about-grid{
@@ -223,6 +246,11 @@ header.scrolled{
 @keyframes float{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-10px);}
+}
+
+@keyframes navFade{
+  from{opacity:0; transform:translateY(-10px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 /* ===== MOBILE ===== */
