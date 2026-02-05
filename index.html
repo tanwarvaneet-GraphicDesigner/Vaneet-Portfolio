@@ -35,7 +35,7 @@ header{
   height:68px;
 }
 
-/* OLD NAV PILL STYLE */
+/* NAV PILL (OLD STYLE) */
 .nav-pill{
   display:flex;
   gap:30px;
@@ -49,7 +49,6 @@ header{
   text-decoration:none;
   font-weight:500;
   color:#0a2540;
-  padding:6px 4px;
   transition:0.3s;
 }
 
@@ -117,16 +116,89 @@ header{
   animation:pulse 2s infinite;
 }
 
+/* ================= ABOUT ================= */
+.about{
+  background:#e9f1ff;
+  margin:90px 6%;
+  padding:90px;
+  border-radius:45px;
+}
+
+.about-grid{
+  display:flex;
+  gap:70px;
+  flex-wrap:wrap;
+}
+
+.about h2{
+  font-size:48px;
+  line-height:1.2;
+}
+
+.about h2 span{
+  color:#1e5eff;
+}
+
+/* CARDS */
+.card{
+  background:#ffffff;
+  padding:30px;
+  border-radius:28px;
+  display:flex;
+  gap:26px;
+  margin-bottom:32px;
+  box-shadow:0 25px 45px rgba(0,0,0,0.08);
+  animation:fadeUp 1s ease;
+}
+
+.card img{
+  width:150px;
+  height:150px;
+  border-radius:22px;
+  object-fit:cover;
+}
+
+.card h3{
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:16px;
+  color:#555;
+}
+
+/* ================= STATS ================= */
+.stats{
+  margin-top:70px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  text-align:center;
+}
+
+.stat{
+  background:#ffffff;
+  padding:34px;
+  border-radius:26px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+  animation:fadeUp 1.2s ease;
+}
+
+.stat h4{
+  font-size:48px;
+  color:#1e5eff;
+}
+
+.stat p{
+  margin-top:6px;
+  font-size:16px;
+}
+
 /* ================= ANIMATIONS ================= */
 @keyframes navEnter{
-  from{
-    opacity:0;
-    transform:translateY(-15px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  from{opacity:0; transform:translateY(-15px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 @keyframes fadeUp{
@@ -168,6 +240,19 @@ header{
   .hero h1{
     font-size:38px;
   }
+
+  .about{
+    padding:55px 30px;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .card{
+    flex-direction:column;
+    text-align:center;
+  }
 }
 </style>
 </head>
@@ -179,7 +264,6 @@ header{
     <img src="logo.png" alt="Vaneet Tanwar">
   </div>
 
-  <!-- OLD NAV -->
   <nav class="nav-pill">
     <a href="#">Home</a>
     <a href="#">About</a>
@@ -203,6 +287,42 @@ header{
   </div>
 </section>
 
+<section class="about">
+  <div class="about-grid">
+    <div>
+      <h2>Creative Design with <br><span>Refreshing Ideas</span></h2>
+    </div>
+
+    <div>
+      <div class="card">
+        <img src="vision.jpg">
+        <div>
+          <h3>Vision</h3>
+          <p>
+            To help brands stand out with modern, clean and conversion-driven visual design.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="mission.jpg">
+        <div>
+          <h3>Mission</h3>
+          <p>
+            To deliver high-quality graphic design and Meta Ads creatives that generate measurable business growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><h4>80+</h4><p>Projects Completed</p></div>
+    <div class="stat"><h4>7+</h4><p>Years Experience</p></div>
+    <div class="stat"><h4>75+</h4><p>Happy Clients</p></div>
+    <div class="stat"><h4>4+</h4><p>Industries Served</p></div>
+  </div>
+</section>
+
 </body>
 </html>
-
