@@ -6,7 +6,6 @@
 <title>Vaneet Tanwar | Graphic Designer & Meta Ads Expert</title>
 
 <style>
-/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
@@ -81,24 +80,10 @@ header.scrolled{
   font-weight:600;
   position:relative;
   animation:pulse 2.2s infinite;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hire-btn{
-  padding:12px 28px;
-  font-size:14px;
-}
-
-.cta{
-  padding:16px 40px;
-  font-size:16px;
-}
-
-.hire-btn:hover,
-.cta:hover{
-  transform:translateY(-3px);
-  box-shadow:0 14px 35px rgba(10,60,255,0.35);
-}
+.hire-btn{padding:12px 28px;font-size:14px;}
+.cta{padding:16px 40px;font-size:16px;}
 
 /* ===== HERO ===== */
 .hero{
@@ -109,50 +94,9 @@ header.scrolled{
   grid-template-columns:1fr 1.2fr;
   gap:70px;
   align-items:center;
-  animation:fadeUp 1s ease forwards;
 }
 
-.hero-img{
-  background:#e6efff;
-  border-radius:36px;
-  padding:38px;
-  position:relative;
-  animation:float 4s ease-in-out infinite;
-}
-
-.hero-img::after{
-  content:"";
-  position:absolute;
-  inset:-18px;
-  border-radius:50px;
-  background:rgba(10,60,255,0.06);
-  z-index:-1;
-}
-
-.hero-img img{
-  width:100%;
-  border-radius:28px;
-}
-
-.hero-content h1{
-  font-size:64px;
-  line-height:1.05;
-  margin-bottom:22px;
-}
-
-.hero-content h1 span{
-  color:#0a3cff;
-}
-
-.hero-content p{
-  font-size:18px;
-  color:#445066;
-  line-height:1.7;
-  max-width:720px;
-  margin-bottom:36px;
-}
-
-/* ===== ABOUT (VISION / MISSION) ===== */
+/* ===== ABOUT ===== */
 .about{
   max-width:1200px;
   margin:120px auto;
@@ -167,44 +111,8 @@ header.scrolled{
   gap:70px;
 }
 
-.about h2{
-  font-size:48px;
-}
+.about h2{font-size:48px;}
 
-.info-box{
-  background:#fff;
-  border-radius:26px;
-  padding:22px;
-  display:flex;
-  gap:22px;
-  margin-bottom:28px;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-box:hover{
-  transform:scale(1.03);
-  box-shadow:0 18px 40px rgba(0,0,0,0.08);
-}
-
-.info-box img{
-  width:120px;
-  height:120px;
-  object-fit:cover;
-  border-radius:18px;
-}
-
-.info-box h4{
-  font-size:22px;
-  margin-bottom:8px;
-}
-
-.info-box p{
-  font-size:16px;
-  color:#445066;
-  line-height:1.6;
-}
-
-/* ===== STATS ===== */
 .stats{
   margin-top:50px;
   display:grid;
@@ -217,29 +125,14 @@ header.scrolled{
   border-radius:26px;
   padding:32px 20px;
   text-align:center;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stat:hover{
-  transform:scale(1.06);
-  box-shadow:0 20px 45px rgba(0,0,0,0.1);
 }
 
 .stat h3{
   font-size:60px;
   color:#0a3cff;
-  margin-bottom:8px;
 }
 
-.stat p{
-  font-size:15px;
-  color:#445066;
-}
-
-/* ================================================= */
-/* =============== WHAT I DO (NEW) ================= */
-/* ================================================= */
-
+/* ===== SERVICES ===== */
 .services{
   max-width:1200px;
   margin:120px auto;
@@ -262,12 +155,6 @@ header.scrolled{
   background:#fff;
   border-radius:28px;
   padding:36px 28px;
-  transition:transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.service-card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 50px rgba(0,0,0,0.12);
 }
 
 .service-icon{
@@ -284,93 +171,40 @@ header.scrolled{
 .service-card p{
   font-size:15px;
   color:#445066;
-  line-height:1.6;
   margin-bottom:14px;
 }
 
 .service-card a{
-  color:#ff6a00;
+  color:#0a3cff;
   text-decoration:none;
   font-weight:600;
-  font-size:14px;
 }
 
 /* CTA CARD */
 .service-cta{
-  background:#ff7a2f;
+  background:#0a3cff;
   color:#fff;
   border-radius:28px;
   padding:36px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-
-.service-cta h4{
-  font-size:22px;
-  margin-bottom:10px;
-}
-
-.service-cta p{
-  font-size:15px;
-  margin-bottom:24px;
 }
 
 .service-cta a{
-  align-self:flex-start;
   background:#fff;
-  color:#ff7a2f;
+  color:#0a3cff;
   padding:12px 26px;
   border-radius:30px;
   text-decoration:none;
   font-weight:700;
-  font-size:14px;
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(40px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-@keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-10px);}
-}
-
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(10,60,255,0.45);}
-  70%{box-shadow:0 0 0 18px rgba(10,60,255,0);}
-  100%{box-shadow:0 0 0 0 rgba(10,60,255,0);}
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:900px){
-  header{padding:16px 20px;}
-  .logo img{height:56px;}
-  .nav{display:none;}
-  .hero{grid-template-columns:1fr; gap:40px; padding:0 20px;}
-  .hero-content h1{font-size:38px;}
-  .about{margin:70px 20px; padding:60px 20px;}
-  .about-grid{grid-template-columns:1fr;}
-  .stats{grid-template-columns:1fr 1fr;}
-  .services{padding:0 20px;}
-  .services-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="notice">
-  Available for Freelance Projects & Long-Term Collaborations
-</div>
+<div class="notice">Available for Freelance Projects & Long-Term Collaborations</div>
 
 <header>
-  <div class="logo">
-    <img src="logo.png" alt="Vaneet Tanwar">
-  </div>
-
+  <div class="logo"><img src="logo.png"></div>
   <nav class="nav">
     <a href="#">Home</a>
     <a href="#">About</a>
@@ -378,112 +212,62 @@ header.scrolled{
     <a href="#">Portfolio</a>
     <a href="#">Contact</a>
   </nav>
-
   <a href="#" class="hire-btn">Hire Me</a>
 </header>
 
-<section class="hero">
-  <div class="hero-img">
-    <img src="profile.jpg" alt="Vaneet Tanwar">
-  </div>
-
-  <div class="hero-content">
-    <h1>
-      <span>Experienced</span><br>
-      Graphic Designer<br>
-      & <span>Meta Ads Expert</span>
-    </h1>
-
-    <p>
-      I help brands grow through clean graphic design and
-      high-performing Meta Ads creatives with a strong
-      focus on clarity and conversion.
-    </p>
-
-    <a href="#" class="cta">Let’s Talk</a>
-  </div>
-</section>
-
-<section class="about">
-  <div class="about-grid">
-    <div>
-      <h2>Creative Design with<br><span style="color:#0a3cff;">Refreshing Ideas</span></h2>
-
-      <div class="stats">
-        <div class="stat"><h3>80+</h3><p>Projects Completed</p></div>
-        <div class="stat"><h3>7+</h3><p>Years Experience</p></div>
-        <div class="stat"><h3>75+</h3><p>Happy Clients</p></div>
-        <div class="stat"><h3>4+</h3><p>Industries Served</p></div>
-      </div>
-    </div>
-
-    <div>
-      <div class="info-box">
-        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=400">
-        <div>
-          <h4>Vision</h4>
-          <p>To help brands stand out with modern, clean and conversion-driven visual design.</p>
-        </div>
-      </div>
-
-      <div class="info-box">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400">
-        <div>
-          <h4>Mission</h4>
-          <p>To deliver high-quality graphic design and Meta Ads creatives that generate measurable business growth.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WHAT I DO SECTION ===== -->
+<!-- ===== WHAT I DO ===== -->
 <section class="services">
   <h2>What I Do?</h2>
 
   <div class="services-grid">
-    <div class="service-card">
-      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/design--v1.png">
-      <h4>UI/UX Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#">Learn More</a>
-    </div>
 
+    <!-- 1 -->
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/pen.png">
       <h4>Graphic Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
       <a href="#">Learn More</a>
     </div>
 
+    <!-- 2 -->
     <div class="service-card">
-      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
-      <h4>Branding</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/ads.png">
+      <h4>Meta Ads</h4>
+      <p>Lorem ipsum dolor sit amet.</p>
       <a href="#">Learn More</a>
     </div>
 
+    <!-- 3 -->
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/monitor.png">
       <h4>Website Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
       <a href="#">Learn More</a>
     </div>
 
+    <!-- 4 -->
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
+      <h4>Branding</h4>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- 5 -->
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/logo.png">
       <h4>Logo Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
       <a href="#">Learn More</a>
     </div>
 
+    <!-- CTA -->
     <div class="service-cta">
-      <div>
-        <h4>Have a project in mind?</h4>
-        <p>Let’s build something impactful together.</p>
-      </div>
+      <h4>Have a project in mind?</h4>
+      <p>Let’s build something impactful together.</p>
       <a href="#">Let’s Talk</a>
     </div>
+
   </div>
 </section>
 
