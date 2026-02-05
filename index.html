@@ -6,7 +6,6 @@
 <title>Vaneet Tanwar | Graphic Designer</title>
 
 <style>
-/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
@@ -16,42 +15,38 @@
 }
 
 body{
-  background:#ffffff;
-  color:#0a0a0a;
+  background:#fbfbf6;
+  color:#062a23;
 }
 
 /* ===== HEADER ===== */
-.header{
-  width:100%;
-  padding:24px 40px;
+header{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  padding:24px 48px;
 }
 
-/* LOGO */
 .logo img{
-  height:55px;
+  height:52px;
 }
 
-/* NAV */
-.nav-wrapper{
-  background:#eaf2ff;
+.nav{
+  background:#dff2a0;
   padding:10px 26px;
   border-radius:50px;
 }
 
-.nav-wrapper a{
+.nav a{
+  margin:0 14px;
   text-decoration:none;
-  color:#003a8f;
   font-size:15px;
   font-weight:500;
-  margin:0 14px;
+  color:#062a23;
 }
 
-/* HIRE BUTTON */
 .hire-btn{
-  background:#003a8f;
+  background:#062a23;
   color:#fff;
   text-decoration:none;
   padding:12px 26px;
@@ -62,86 +57,69 @@ body{
 
 /* ===== HERO ===== */
 .hero{
-  padding:120px 40px;
-  max-width:1100px;
-  margin:auto;
+  max-width:1200px;
+  margin:80px auto;
+  padding:0 48px;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:60px;
+  align-items:center;
 }
 
-.hero h1{
-  font-size:56px;
-  font-weight:700;
-  margin-bottom:16px;
+.hero-img{
+  background:#eaf7c5;
+  border-radius:28px;
+  padding:40px;
 }
 
-.hero p{
-  font-size:20px;
-  color:#555;
-  max-width:700px;
-  line-height:1.6;
+.hero-img img{
+  width:100%;
+  border-radius:22px;
+}
+
+.hero-content h1{
+  font-size:64px;
+  line-height:1.05;
+  margin-bottom:20px;
+}
+
+.hero-content h1 span{
+  display:block;
+}
+
+.hero-content p{
+  font-size:18px;
+  color:#4b5b57;
+  line-height:1.7;
+  margin-bottom:34px;
+}
+
+.cta{
+  background:#ff7a33;
+  color:#fff;
+  text-decoration:none;
+  padding:16px 36px;
+  border-radius:40px;
+  font-size:16px;
+  font-weight:600;
 }
 
 /* ===== MOBILE ===== */
-@media (max-width:768px){
+@media(max-width:900px){
 
-  .header{
+  header{
     padding:16px 20px;
+  }
+
+  .nav{
+    display:none;
   }
 
   .logo img{
     height:42px;
   }
 
-  .nav-wrapper{
-    display:none;
-  }
-
-  .hire-btn{
-    padding:10px 18px;
-    font-size:13px;
-  }
-
   .hero{
-    padding:80px 20px;
-  }
-
-  .hero h1{
-    font-size:36px;
-  }
-
-  .hero p{
-    font-size:17px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header class="header">
-  <div class="logo">
-    <img src="logo.png" alt="Vaneet Tanwar">
-  </div>
-
-  <nav class="nav-wrapper">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <a href="#" class="hire-btn">Hire Me</a>
-</header>
-
-<section class="hero">
-  <h1>Graphic Designer</h1>
-  <p>
-    I help brands communicate clearly through clean,
-    impactful and conversion-focused design.
-    With 7+ years of professional experience across
-    corporate and freelance projects.
-  </p>
-</section>
-
-</body>
-</html>
+    grid-template-columns:1fr;
+    gap:40px;
+    margin:40
