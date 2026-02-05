@@ -15,117 +15,55 @@
 
 body{
   background:#ffffff;
-  color:#111;
-  line-height:1.6;
 }
 
-/* Layout */
-.wrapper{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-/* Header */
-header{
+/* HEADER */
+.header{
+  width:100%;
+  padding:20px 40px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  margin-bottom:80px;
+  justify-content:space-between;
 }
 
-header h1{
-  font-size:22px;
-  font-weight:600;
+/* LOGO */
+.logo img{
+  height:60px;
 }
 
-nav a{
-  margin-left:24px;
+/* NAV BAR */
+.nav-wrapper{
+  background:#e9f1ff;
+  padding:14px 26px;
+  border-radius:50px;
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.nav-wrapper a{
   text-decoration:none;
-  color:#111;
-  font-size:14px;
-}
-
-/* Hero */
-.hero{
-  max-width:700px;
-  margin-bottom:120px;
-}
-
-.hero h2{
-  font-size:48px;
-  font-weight:500;
-  line-height:1.2;
-}
-
-.hero p{
-  margin-top:20px;
-  font-size:18px;
-  color:#555;
-}
-
-/* Work */
-.section{
-  margin-bottom:120px;
-}
-
-.section h3{
-  font-size:26px;
-  margin-bottom:40px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-  gap:40px;
-}
-
-.project{
-  border-top:1px solid #eee;
-  padding-top:20px;
-}
-
-.project h4{
-  font-size:18px;
+  color:#0b3a75;
+  font-size:15px;
   font-weight:500;
 }
 
-.project span{
-  font-size:14px;
-  color:#777;
-}
-
-/* About */
-.about p{
-  max-width:700px;
-  font-size:18px;
-  color:#444;
-}
-
-/* Contact */
-.contact a{
-  display:inline-block;
-  margin-top:20px;
+/* HIRE BUTTON */
+.hire-btn{
+  margin-left:30px;
   padding:14px 28px;
-  background:#000;
-  color:#fff;
+  background:#0b3a75;
+  color:#ffffff;
+  border-radius:40px;
   text-decoration:none;
-  font-size:14px;
+  font-size:15px;
+  font-weight:500;
 }
 
-/* Footer */
-footer{
-  margin-top:120px;
-  padding-top:40px;
-  border-top:1px solid #eee;
-  font-size:13px;
-  color:#777;
-}
-
-/* Mobile */
+/* RESPONSIVE */
 @media(max-width:768px){
-  .hero h2{
-    font-size:34px;
+  .nav-wrapper{
+    display:none;
   }
 }
 </style>
@@ -133,70 +71,24 @@ footer{
 
 <body>
 
-<div class="wrapper">
-
-<header>
-  <h1>Vaneet Tanwar</h1>
-  <nav>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>
-    Graphic Designer creating clean, clear
-    and professional visual design.
-  </h2>
-  <p>
-    7+ years of experience in branding, social media,
-    print design, thumbnails and digital creatives.
-  </p>
-</section>
-
-<section class="section" id="work">
-  <h3>Selected Work</h3>
-  <div class="grid">
-    <div class="project">
-      <h4>Brand Identity</h4>
-      <span>Logo & Visual System</span>
-    </div>
-    <div class="project">
-      <h4>Social Media Creatives</h4>
-      <span>Instagram & Ad Design</span>
-    </div>
-    <div class="project">
-      <h4>Print Design</h4>
-      <span>Flyers, Brochures, Posters</span>
-    </div>
-    <div class="project">
-      <h4>YouTube Thumbnails</h4>
-      <span>High CTR Thumbnails</span>
-    </div>
+<header class="header">
+  <!-- LEFT LOGO -->
+  <div class="logo">
+    <img src="logo.png" alt="Vaneet Tanwar">
   </div>
-</section>
 
-<section class="section about" id="about">
-  <h3>About</h3>
-  <p>
-    I am a professional graphic designer with over seven years of experience
-    working with corporate teams and freelance clients. I focus on clarity,
-    consistency, and design that supports real business goals.
-  </p>
-</section>
+  <!-- CENTER NAV -->
+  <div class="nav-wrapper">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </div>
 
-<section class="section contact" id="contact">
-  <h3>Contact</h3>
-  <p>Available for freelance and long-term projects.</p>
-  <a href="mailto:your@email.com">Get in Touch</a>
-</section>
-
-<footer>
-  © 2026 Vaneet Tanwar — Graphic Designer
-</footer>
-
-</div>
+  <!-- RIGHT BUTTON -->
+  <a href="mailto:your@email.com" class="hire-btn">Hire Me</a>
+</header>
 
 </body>
 </html>
