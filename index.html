@@ -282,7 +282,7 @@ header.scrolled{
 }
 
 .service-card p{
-  font-size:15px;
+  font-size:18px;
   color:#445066;
   line-height:1.6;
   margin-bottom:14px;
@@ -297,13 +297,20 @@ header.scrolled{
 
 /* CTA CARD */
 .service-cta{
-  background:#ff7a2f;
+  background:#0a3cff;
   color:#fff;
   border-radius:28px;
   padding:36px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
+    transition:transform 0.35s ease, box-shadow 0.35s ease;
+
+}
+
+.service-cta:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.12);
 }
 
 .service-cta h4{
@@ -444,37 +451,32 @@ header.scrolled{
   <div class="services-grid">
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/design--v1.png">
-      <h4>UI/UX Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#">Learn More</a>
+      <h4>Graphic Design</h4>
+      <p>Creative and impactful designs that visually communicate your brand message and connect with your audience.</p>
     </div>
 
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/pen.png">
-      <h4>Graphic Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#">Learn More</a>
+      <h4>Meta Ads</h4>
+      <p>High-converting ad creatives designed for Facebook and Instagram to boost engagement, leads, and sales.</p>
     </div>
 
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
-      <h4>Branding</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#">Learn More</a>
+      <h4>Website Design</h4>
+      <p>Modern, user-friendly, and responsive website designs focused on performance and great user experience.</p>
     </div>
 
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/monitor.png">
-      <h4>Website Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#">Learn More</a>
+      <h4>Logo Design</h4>
+      <p>Unique, memorable, and timeless logo designs that represent your brand’s core values.</p>
     </div>
 
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/logo.png">
-      <h4>Logo Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#">Learn More</a>
+      <h4>Branding</h4>
+      <p>Complete brand identity solutions that define your brand’s personality and build strong recognition.</p>
     </div>
 
     <div class="service-cta">
