@@ -29,12 +29,12 @@ body{
   font-size:14px;
 }
 
-/* ===== HEADER (HEIGHT REDUCED ONLY) ===== */
+/* ===== HEADER ===== */
 header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:14px 48px; /* ⬅ reduced */
+  padding:5px 15px;
   position:sticky;
   top:0;
   z-index:1000;
@@ -47,7 +47,7 @@ header.scrolled{
 }
 
 .logo img{
-  height:56px; /* ⬅ reduced */
+  height:70px;
 }
 
 /* ===== NAV ===== */
@@ -109,7 +109,6 @@ header.scrolled{
   grid-template-columns:1fr 1.2fr;
   gap:70px;
   align-items:center;
-  animation:fadeUp 1s ease forwards;
 }
 
 .hero-img{
@@ -152,15 +151,95 @@ header.scrolled{
   margin-bottom:36px;
 }
 
-/* ===== ABOUT / STATS / SERVICES (UNCHANGED) ===== */
-/* ---- your original code continues exactly same ---- */
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(40px);}
-  to{opacity:1; transform:translateY(0);}
+/* ===== SERVICES ===== */
+.services{
+  max-width:1200px;
+  margin:120px auto;
+  padding:0 48px;
 }
 
+.services h2{
+  text-align:center;
+  font-size:46px;
+  margin-bottom:60px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+}
+
+.service-card{
+  background:#fff;
+  border-radius:28px;
+  padding:36px 28px;
+  transition:transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.12);
+}
+
+.service-icon{
+  width:52px;
+  height:52px;
+  margin-bottom:18px;
+}
+
+.service-card h4{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.service-card p{
+  font-size:15px;
+  color:#445066;
+  line-height:1.6;
+  margin-bottom:14px;
+}
+
+.service-card a{
+  color:#0a3cff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+}
+
+/* CTA CARD */
+.service-cta{
+  background:#0a3cff;
+  color:#fff;
+  border-radius:28px;
+  padding:36px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.service-cta h4{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.service-cta p{
+  font-size:15px;
+  margin-bottom:24px;
+}
+
+.service-cta a{
+  align-self:flex-start;
+  background:#fff;
+  color:#0a3cff;
+  padding:12px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+/* ===== ANIMATIONS ===== */
 @keyframes float{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-10px);}
@@ -174,9 +253,10 @@ header.scrolled{
 
 /* ===== MOBILE ===== */
 @media(max-width:900px){
-  header{padding:12px 20px;}
-  .logo img{height:48px;}
   .nav{display:none;}
+  .hero{grid-template-columns:1fr; padding:0 20px;}
+  .services{padding:0 20px;}
+  .services-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -203,7 +283,85 @@ header.scrolled{
   <a href="#" class="hire-btn">Hire Me</a>
 </header>
 
-<!-- REST OF YOUR HTML IS 100% SAME BELOW -->
+<section class="hero">
+  <div class="hero-img">
+    <img src="profile.jpg" alt="Vaneet Tanwar">
+  </div>
+
+  <div class="hero-content">
+    <h1>
+      <span>Experienced</span><br>
+      Graphic Designer<br>
+      & <span>Meta Ads Expert</span>
+    </h1>
+
+    <p>
+      I help brands grow through clean graphic design and
+      high-performing Meta Ads creatives with a strong
+      focus on clarity and conversion.
+    </p>
+
+    <a href="#" class="cta">Let’s Talk</a>
+  </div>
+</section>
+
+<!-- ===== WHAT I DO ===== -->
+<section class="services">
+  <h2>What I Do?</h2>
+
+  <div class="services-grid">
+
+    <!-- 1. Graphic Design -->
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/pen.png">
+      <h4>Graphic Design</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- 2. Meta Ads -->
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/advertising.png">
+      <h4>Meta Ads</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- 3. Website Design -->
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/monitor.png">
+      <h4>Website Design</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- 4. Branding -->
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
+      <h4>Branding</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- 5. Logo Design -->
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/logo.png">
+      <h4>Logo Design</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- CTA -->
+    <div class="service-cta">
+      <div>
+        <h4>Have a project in mind?</h4>
+        <p>Let’s build something impactful together.</p>
+      </div>
+      <a href="#">Let’s Talk</a>
+    </div>
+
+  </div>
+</section>
 
 <script>
 window.addEventListener("scroll",()=>{
