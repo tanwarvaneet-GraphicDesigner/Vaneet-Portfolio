@@ -1,84 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vaneet Tanwar | Graphic Designer & Meta Ads Expert</title>
 
 <style>
 /* ===== RESET ===== */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-  font-family:-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
   font-family:-apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, Helvetica, Arial, sans-serif;
 }
 
 body{
-background:#f7f9fc;
-color:#0a1a2f;
+  background:#f7f9fc;
+  color:#0a1a2f;
 }
 
-/* ===== NOTICE ===== */
 /* ===== NOTIFICATION BAR ===== */
 .notice{
-background:#0a3cff;
-color:#fff;
-@@ -32,193 +34,463 @@
-display:flex;
-align-items:center;
-justify-content:space-between;
-  padding:5px 15px;
+  background:#0a3cff;
+  color:#fff;
+  text-align:center;
+  padding:10px;
+  font-size:14px;
+}
+
+/* ===== HEADER ===== */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   padding:22px 48px;
-position:sticky;
-top:0;
-z-index:1000;
-background:#f7f9fc;
-  transition:box-shadow .3s ease;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#f7f9fc;
   transition:box-shadow 0.3s ease;
 }
 
 header.scrolled{
-  box-shadow:0 10px 35px rgba(0,0,0,.08);
   box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
 
 .logo img{
   height:70px;
 }
-.logo img{height:70px}
 
 /* ===== NAV ===== */
 .nav{
-background:#e6efff;
-padding:10px 26px;
-border-radius:50px;
+  background:#e6efff;
+  padding:10px 26px;
+  border-radius:50px;
 }
 
 .nav a{
-margin:0 14px;
-text-decoration:none;
-font-size:15px;
-font-weight:500;
-color:#0a1a2f;
-display:inline-block;
-  transition:transform .25s ease;
+  margin:0 14px;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  color:#0a1a2f;
+  display:inline-block;
   transition:transform 0.25s ease;
 }
 
 .nav a:hover{
   transform:scale(1.12);
 }
-.nav a:hover{transform:scale(1.12)}
 
 /* ===== BUTTONS ===== */
-.hire-btn,.cta{
 .hire-btn,
 .cta{
-background:#0a3cff;
-color:#fff;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
+  background:#0a3cff;
+  color:#fff;
+  text-decoration:none;
+  border-radius:50px;
+  font-weight:600;
   position:relative;
-animation:pulse 2.2s infinite;
+  animation:pulse 2.2s infinite;
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -217,18 +219,12 @@ animation:pulse 2.2s infinite;
   text-align:center;
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
-.hire-btn{padding:12px 28px;font-size:14px}
-.cta{padding:16px 40px;font-size:16px}
 
-/* ===== HERO (UNCHANGED) ===== */
-.hero{max-width:1200px;margin:90px auto;padding:0 48px}
 .stat:hover{
   transform:scale(1.06);
   box-shadow:0 20px 45px rgba(0,0,0,0.1);
 }
 
-/* ===== ABOUT (UNCHANGED) ===== */
-.about{max-width:1200px;margin:120px auto;padding:90px 48px;background:#e6efff;border-radius:50px}
 .stat h3{
   font-size:60px;
   color:#0a3cff;
@@ -244,29 +240,28 @@ animation:pulse 2.2s infinite;
 /* =============== WHAT I DO (NEW) ================= */
 /* ================================================= */
 
-/* ===== SERVICES ===== */
 .services{
-max-width:1200px;
-margin:120px auto;
-padding:0 48px;
+  max-width:1200px;
+  margin:120px auto;
+  padding:0 48px;
 }
 
 .services h2{
-text-align:center;
-font-size:46px;
-margin-bottom:60px;
+  text-align:center;
+  font-size:46px;
+  margin-bottom:60px;
 }
 
 .services-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:32px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
 }
 
 .service-card{
-background:#fff;
-border-radius:28px;
-padding:36px 28px;
+  background:#fff;
+  border-radius:28px;
+  padding:36px 28px;
   transition:transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -276,39 +271,36 @@ padding:36px 28px;
 }
 
 .service-icon{
-width:52px;
-height:52px;
-margin-bottom:18px;
+  width:52px;
+  height:52px;
+  margin-bottom:18px;
 }
 
 .service-card h4{
-font-size:22px;
-margin-bottom:10px;
+  font-size:22px;
+  margin-bottom:10px;
 }
 
 .service-card p{
-font-size:15px;
-color:#445066;
+  font-size:15px;
+  color:#445066;
   line-height:1.6;
-margin-bottom:14px;
+  margin-bottom:14px;
 }
 
 .service-card a{
-  color:#0a3cff;
   color:#ff6a00;
-text-decoration:none;
-font-weight:600;
+  text-decoration:none;
+  font-weight:600;
   font-size:14px;
 }
 
-/* CTA */
 /* CTA CARD */
 .service-cta{
-  background:#0a3cff;
   background:#ff7a2f;
-color:#fff;
-border-radius:28px;
-padding:36px;
+  color:#fff;
+  border-radius:28px;
+  padding:36px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
@@ -326,13 +318,12 @@ padding:36px;
 
 .service-cta a{
   align-self:flex-start;
-background:#fff;
-  color:#0a3cff;
+  background:#fff;
   color:#ff7a2f;
-padding:12px 26px;
-border-radius:30px;
-text-decoration:none;
-font-weight:700;
+  padding:12px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
   font-size:14px;
 }
 
@@ -348,9 +339,6 @@ font-weight:700;
 }
 
 @keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(10,60,255,.45)}
-  70%{box-shadow:0 0 0 18px rgba(10,60,255,0)}
-  100%{box-shadow:0 0 0 0 rgba(10,60,255,0)}
   0%{box-shadow:0 0 0 0 rgba(10,60,255,0.45);}
   70%{box-shadow:0 0 0 18px rgba(10,60,255,0);}
   100%{box-shadow:0 0 0 0 rgba(10,60,255,0);}
@@ -374,29 +362,26 @@ font-weight:700;
 
 <body>
 
-<div class="notice">Available for Freelance Projects & Long-Term Collaborations</div>
 <div class="notice">
   Available for Freelance Projects & Long-Term Collaborations
 </div>
 
 <header>
-  <div class="logo"><img src="logo.png"></div>
   <div class="logo">
     <img src="logo.png" alt="Vaneet Tanwar">
   </div>
 
-<nav class="nav">
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Services</a>
-<a href="#">Portfolio</a>
-<a href="#">Contact</a>
-</nav>
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+  </nav>
 
-<a href="#" class="hire-btn">Hire Me</a>
+  <a href="#" class="hire-btn">Hire Me</a>
 </header>
 
-<!-- ===== WHAT I DO ===== -->
 <section class="hero">
   <div class="hero-img">
     <img src="profile.jpg" alt="Vaneet Tanwar">
@@ -454,9 +439,9 @@ font-weight:700;
 
 <!-- ===== WHAT I DO SECTION ===== -->
 <section class="services">
-<h2>What I Do?</h2>
+  <h2>What I Do?</h2>
 
-<div class="services-grid">
+  <div class="services-grid">
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/design--v1.png">
       <h4>UI/UX Design</h4>
@@ -464,70 +449,50 @@ font-weight:700;
       <a href="#">Learn More</a>
     </div>
 
-    <!-- 1 -->
-<div class="service-card">
-<img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/pen.png">
-<h4>Graphic Design</h4>
-      <p>Lorem ipsum dolor sit amet.</p>
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/pen.png">
+      <h4>Graphic Design</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<a href="#">Learn More</a>
-</div>
-
-    <!-- 2 -->
-<div class="service-card">
-      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/ads.png">
-      <h4>Meta Ads</h4>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
-      <h4>Branding</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<a href="#">Learn More</a>
-</div>
-
-    <!-- 3 -->
-<div class="service-card">
-<img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/monitor.png">
-<h4>Website Design</h4>
-      <p>Lorem ipsum dolor sit amet.</p>
       <a href="#">Learn More</a>
     </div>
 
-    <!-- 4 -->
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
       <h4>Branding</h4>
-      <p>Lorem ipsum dolor sit amet.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<a href="#">Learn More</a>
-</div>
+      <a href="#">Learn More</a>
+    </div>
 
-    <!-- 5 -->
-<div class="service-card">
-<img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/logo.png">
-<h4>Logo Design</h4>
-      <p>Lorem ipsum dolor sit amet.</p>
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/monitor.png">
+      <h4>Website Design</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-<a href="#">Learn More</a>
-</div>
+      <a href="#">Learn More</a>
+    </div>
 
-    <!-- CTA -->
-<div class="service-cta">
-      <h4>Have a project in mind?</h4>
-      <p>Let’s build something impactful together.</p>
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/logo.png">
+      <h4>Logo Design</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <div class="service-cta">
       <div>
         <h4>Have a project in mind?</h4>
         <p>Let’s build something impactful together.</p>
       </div>
-<a href="#">Let’s Talk</a>
-</div>
-
-</div>
+      <a href="#">Let’s Talk</a>
+    </div>
+  </div>
 </section>
 
 <script>
 window.addEventListener("scroll",()=>{
-  document.querySelector("header").classList.toggle("scrolled",window.scrollY>10);
   document.querySelector("header")
   .classList.toggle("scrolled",window.scrollY>10);
 });
 </script>
+
+</body>
+</html>
