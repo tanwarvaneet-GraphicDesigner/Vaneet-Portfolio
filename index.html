@@ -34,7 +34,7 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:22px 48px;
+  padding:5px 15px;
   position:sticky;
   top:0;
   z-index:1000;
@@ -109,7 +109,6 @@ header.scrolled{
   grid-template-columns:1fr 1.2fr;
   gap:70px;
   align-items:center;
-  animation:fadeUp 1s ease forwards;
 }
 
 .hero-img{
@@ -152,94 +151,7 @@ header.scrolled{
   margin-bottom:36px;
 }
 
-/* ===== ABOUT (VISION / MISSION) ===== */
-.about{
-  max-width:1200px;
-  margin:120px auto;
-  padding:90px 48px;
-  background:#e6efff;
-  border-radius:50px;
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1.2fr 1fr;
-  gap:70px;
-}
-
-.about h2{
-  font-size:48px;
-}
-
-.info-box{
-  background:#fff;
-  border-radius:26px;
-  padding:22px;
-  display:flex;
-  gap:22px;
-  margin-bottom:28px;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-box:hover{
-  transform:scale(1.03);
-  box-shadow:0 18px 40px rgba(0,0,0,0.08);
-}
-
-.info-box img{
-  width:120px;
-  height:120px;
-  object-fit:cover;
-  border-radius:18px;
-}
-
-.info-box h4{
-  font-size:22px;
-  margin-bottom:8px;
-}
-
-.info-box p{
-  font-size:16px;
-  color:#445066;
-  line-height:1.6;
-}
-
-/* ===== STATS ===== */
-.stats{
-  margin-top:50px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:26px;
-}
-
-.stat{
-  background:#fff;
-  border-radius:26px;
-  padding:32px 20px;
-  text-align:center;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stat:hover{
-  transform:scale(1.06);
-  box-shadow:0 20px 45px rgba(0,0,0,0.1);
-}
-
-.stat h3{
-  font-size:60px;
-  color:#0a3cff;
-  margin-bottom:8px;
-}
-
-.stat p{
-  font-size:15px;
-  color:#445066;
-}
-
-/* ================================================= */
-/* =============== WHAT I DO (NEW) ================= */
-/* ================================================= */
-
+/* ===== SERVICES ===== */
 .services{
   max-width:1200px;
   margin:120px auto;
@@ -289,7 +201,7 @@ header.scrolled{
 }
 
 .service-card a{
-  color:#ff6a00;
+  color:#0a3cff;
   text-decoration:none;
   font-weight:600;
   font-size:14px;
@@ -297,7 +209,7 @@ header.scrolled{
 
 /* CTA CARD */
 .service-cta{
-  background:#ff7a2f;
+  background:#0a3cff;
   color:#fff;
   border-radius:28px;
   padding:36px;
@@ -319,7 +231,7 @@ header.scrolled{
 .service-cta a{
   align-self:flex-start;
   background:#fff;
-  color:#ff7a2f;
+  color:#0a3cff;
   padding:12px 26px;
   border-radius:30px;
   text-decoration:none;
@@ -328,11 +240,6 @@ header.scrolled{
 }
 
 /* ===== ANIMATIONS ===== */
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(40px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
 @keyframes float{
   0%,100%{transform:translateY(0);}
   50%{transform:translateY(-10px);}
@@ -346,14 +253,8 @@ header.scrolled{
 
 /* ===== MOBILE ===== */
 @media(max-width:900px){
-  header{padding:16px 20px;}
-  .logo img{height:56px;}
   .nav{display:none;}
-  .hero{grid-template-columns:1fr; gap:40px; padding:0 20px;}
-  .hero-content h1{font-size:38px;}
-  .about{margin:70px 20px; padding:60px 20px;}
-  .about-grid{grid-template-columns:1fr;}
-  .stats{grid-template-columns:1fr 1fr;}
+  .hero{grid-template-columns:1fr; padding:0 20px;}
   .services{padding:0 20px;}
   .services-grid{grid-template-columns:1fr;}
 }
@@ -404,51 +305,13 @@ header.scrolled{
   </div>
 </section>
 
-<section class="about">
-  <div class="about-grid">
-    <div>
-      <h2>Creative Design with<br><span style="color:#0a3cff;">Refreshing Ideas</span></h2>
-
-      <div class="stats">
-        <div class="stat"><h3>80+</h3><p>Projects Completed</p></div>
-        <div class="stat"><h3>7+</h3><p>Years Experience</p></div>
-        <div class="stat"><h3>75+</h3><p>Happy Clients</p></div>
-        <div class="stat"><h3>4+</h3><p>Industries Served</p></div>
-      </div>
-    </div>
-
-    <div>
-      <div class="info-box">
-        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=400">
-        <div>
-          <h4>Vision</h4>
-          <p>To help brands stand out with modern, clean and conversion-driven visual design.</p>
-        </div>
-      </div>
-
-      <div class="info-box">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400">
-        <div>
-          <h4>Mission</h4>
-          <p>To deliver high-quality graphic design and Meta Ads creatives that generate measurable business growth.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WHAT I DO SECTION ===== -->
+<!-- ===== WHAT I DO ===== -->
 <section class="services">
   <h2>What I Do?</h2>
 
   <div class="services-grid">
-    <div class="service-card">
-      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/design--v1.png">
-      <h4>UI/UX Design</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#">Learn More</a>
-    </div>
 
+    <!-- 1. Graphic Design -->
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/pen.png">
       <h4>Graphic Design</h4>
@@ -456,13 +319,15 @@ header.scrolled{
       <a href="#">Learn More</a>
     </div>
 
+    <!-- 2. Meta Ads -->
     <div class="service-card">
-      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
-      <h4>Branding</h4>
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/advertising.png">
+      <h4>Meta Ads</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <a href="#">Learn More</a>
     </div>
 
+    <!-- 3. Website Design -->
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/monitor.png">
       <h4>Website Design</h4>
@@ -470,6 +335,15 @@ header.scrolled{
       <a href="#">Learn More</a>
     </div>
 
+    <!-- 4. Branding -->
+    <div class="service-card">
+      <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
+      <h4>Branding</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#">Learn More</a>
+    </div>
+
+    <!-- 5. Logo Design -->
     <div class="service-card">
       <img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/logo.png">
       <h4>Logo Design</h4>
@@ -477,6 +351,7 @@ header.scrolled{
       <a href="#">Learn More</a>
     </div>
 
+    <!-- CTA -->
     <div class="service-cta">
       <div>
         <h4>Have a project in mind?</h4>
@@ -484,6 +359,7 @@ header.scrolled{
       </div>
       <a href="#">Let’s Talk</a>
     </div>
+
   </div>
 </section>
 
