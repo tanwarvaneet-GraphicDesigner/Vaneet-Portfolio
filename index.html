@@ -174,10 +174,10 @@ header.scrolled{
 .info-box{
   background:#fff;
   border-radius:26px;
+  padding:22px;
   display:flex;
   gap:22px;
   margin-bottom:28px;
-  overflow:hidden; /* 🔥 KEY: allows image to touch borders */
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -187,14 +187,10 @@ header.scrolled{
 }
 
 .info-box img{
-  width:160px;        /* bigger image */
-  height:100%;
+  width:120px;
+  height:120px;
   object-fit:cover;
-  border-radius:26px 0 0 26px; /* matches card corners */
-}
-
-.info-content{
-  padding:22px; /* moved padding here */
+  border-radius:18px;
 }
 
 .info-box h4{
@@ -430,29 +426,20 @@ header.scrolled{
 
     <div>
       <div class="info-box">
-        <div class="info-img">
-          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=400">
-        </div>
-        <div class="info-content">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=400">
+        <div>
           <h4>Vision</h4>
           <p>To help brands stand out with modern, clean and conversion-driven visual design.</p>
         </div>
       </div>
 
       <div class="info-box">
-  <div class="info-img">
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400">
-  </div>
-
-  <div class="info-content">
-    <h4>Mission</h4>
-    <p>
-      To deliver high-quality graphic design and Meta Ads creatives
-      that generate measurable business growth.
-    </p>
-  </div>
-</div>
-
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400">
+        <div>
+          <h4>Mission</h4>
+          <p>To deliver high-quality graphic design and Meta Ads creatives that generate measurable business growth.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
