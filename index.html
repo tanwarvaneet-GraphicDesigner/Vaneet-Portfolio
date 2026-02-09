@@ -364,6 +364,89 @@ header.scrolled{
   .services{padding:0 20px;}
   .services-grid{grid-template-columns:1fr;}
 }
+
+.experience-skills{
+  max-width:1200px;
+  margin:120px auto;
+  padding:80px 70px;
+  background:#e6efff; /* SAME BLUE AS WEBSITE */
+  border-radius:50px;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Helvetica, Arial, sans-serif;
+}
+
+.experience-skills h2{
+  text-align:center;
+  font-size:48px;
+  margin-bottom:70px;
+  color:#0a1a2f;
+}
+
+.exp-skill-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:80px;
+}
+
+/* LEFT CONTENT */
+.exp-item{
+  margin-bottom:42px;
+}
+
+.exp-item h4{
+  font-size:26px;
+  margin-bottom:10px;
+  color:#0a1a2f;
+}
+
+.exp-item p{
+  font-size:16px;
+  color:#445066;
+  line-height:1.7;
+  max-width:520px;
+}
+
+/* RIGHT SKILLS */
+.skill{
+  margin-bottom:36px;
+}
+
+.skill span{
+  display:block;
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:12px;
+  color:#0a1a2f;
+}
+
+.bar{
+  width:100%;
+  height:8px;
+  background:#ffffff;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  background:#8fb4ff; /* LIGHT BLUE LINE */
+  border-radius:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .experience-skills{
+    padding:60px 30px;
+  }
+
+  .exp-skill-grid{
+    grid-template-columns:1fr;
+  }
+
+  .experience-skills h2{
+    font-size:36px;
+  }
+}
 </style>
 </head>
 
@@ -485,6 +568,98 @@ header.scrolled{
         <p>Let’s build something impactful together.</p>
       </div>
       <a href="#">Let’s Talk</a>
+    </div>
+  </div>
+</section>
+
+<section class="experience-skills">
+  <h2>My Experience and Skills</h2>
+
+  <div class="exp-skill-grid">
+    <!-- LEFT SIDE -->
+    <div class="experience">
+
+      <div class="exp-item">
+        <h4>Graphic Design</h4>
+        <p>
+          Creating high-quality visual designs including social media creatives,
+          ad designs, print materials, and brand visuals with a strong focus on
+          clarity and conversion.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <h4>Meta Ads</h4>
+        <p>
+          Designing scroll-stopping Meta Ads creatives optimized for performance,
+          engagement, and measurable business growth.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <h4>Website Design</h4>
+        <p>
+          Designing clean, responsive, and user-friendly website layouts focused
+          on modern UI and strong user experience.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <h4>Logo Design</h4>
+        <p>
+          Crafting unique, memorable logos that reflect brand identity and
+          long-term value.
+        </p>
+      </div>
+
+      <div class="exp-item">
+        <h4>Branding</h4>
+        <p>
+          Building consistent brand systems including typography, color palettes,
+          and visual guidelines.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="skills">
+
+      <div class="skill">
+        <span>Graphic Design</span>
+        <div class="bar">
+          <div class="fill" style="width:100%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Meta Ads Creatives</span>
+        <div class="bar">
+          <div class="fill" style="width:90%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Website Design</span>
+        <div class="bar">
+          <div class="fill" style="width:85%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Logo Design</span>
+        <div class="bar">
+          <div class="fill" style="width:80%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Branding</span>
+        <div class="bar">
+          <div class="fill" style="width:82%"></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
