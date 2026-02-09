@@ -365,95 +365,255 @@ header{padding:16px 20px;}
 .services-grid{grid-template-columns:1fr;}
 }
 
-.experience-skills{
-  max-width:1200px;
-  margin:120px auto;
-  padding:80px 70px;
-  background:#e6efff; /* SAME BLUE AS WEBSITE */
-  border-radius:50px;
-  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI",
-  Roboto, Helvetica, Arial, sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",
+  Roboto,Helvetica,Arial,sans-serif;
 }
 
-.experience-skills h2{
-  text-align:center;
-  font-size:48px;
-  margin-bottom:70px;
+body{
+  background:#f7f9fc;
   color:#0a1a2f;
 }
 
-.exp-skill-grid{
+/* ===== MAIN WRAP ===== */
+.experience-wrap{
+  max-width:1200px;
+  margin:90px auto;
+  padding:90px;
+  background:#eaf1ff;
+  border-radius:50px;
+}
+
+/* ===== GRID ===== */
+.exp-grid{
   display:grid;
   grid-template-columns:1.2fr 1fr;
-  gap:80px;
+  gap:90px;
 }
 
-/* LEFT CONTENT */
+/* ===== LEFT CONTENT ===== */
 .exp-item{
-  margin-bottom:42px;
+  margin-bottom:46px;
 }
 
-.exp-item h4{
-  font-size:26px;
+.exp-item h3{
+  font-size:24px;
   margin-bottom:10px;
-  color:#0a1a2f;
 }
 
 .exp-item p{
   font-size:16px;
   color:#445066;
   line-height:1.7;
-  max-width:520px;
 }
 
-/* RIGHT SKILLS */
+/* ===== SKILLS ===== */
 .skill{
-  margin-bottom:36px;
+  margin-bottom:30px;
 }
 
-.skill span{
-  display:block;
-  font-size:20px;
-  font-weight:600;
-  margin-bottom:12px;
-  color:#0a1a2f;
+.skill h4{
+  font-size:17px;
+  margin-bottom:10px;
 }
 
 .bar{
   width:100%;
-  height:8px;
-  background:#ffffff;
-  border-radius:10px;
-  overflow:hidden;
+  height:9px;
+  background:#dce7ff;
+  border-radius:30px;
 }
 
-.fill{
+.bar span{
+  display:block;
   height:100%;
-  background:#8fb4ff; /* LIGHT BLUE LINE */
-  border-radius:10px;
+  background:#7fa2ff;
+  border-radius:30px;
 }
 
-/* RESPONSIVE */
+/* ===== TOOLS ===== */
+.tools{
+  margin-top:60px;
+}
+
+.tools h3{
+  font-size:26px;
+  margin-bottom:30px;
+  text-align:left;
+}
+
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.tool{
+  background:#dce7ff;
+  border-radius:22px;
+  padding:15px 7px;
+  text-align:center;
+  transition:0.3s ease;
+}
+
+.tool:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.1);
+}
+
+.tool img{
+  width:56px;   /* 🔥 ICON SIZE INCREASED */
+  height:56px;
+  margin-bottom:14px;
+}
+
+.tool span{
+  font-size:15px;
+  font-weight:600;
+  display:block;
+}
+
+/* ===== MOBILE ===== */
 @media(max-width:900px){
-  .experience-skills{
-    padding:60px 30px;
+  .experience-wrap{
+    padding:55px 22px;
   }
 
-  .exp-skill-grid{
+  .exp-grid{
     grid-template-columns:1fr;
   }
 
-  .experience-skills h2{
-    font-size:36px;
+  .tools-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 }
 </style>
 </head>
 
-@@ -489,6 +572,98 @@
+<body>
+
+<div class="notice">
+Available for Freelance Projects & Long-Term Collaborations
+</div>
+
+<header>
+<div class="logo">
+<img src="logo.png" alt="Vaneet Tanwar">
+</div>
+
+<nav class="nav">
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Portfolio</a>
+<a href="#">Contact</a>
+</nav>
+
+<a href="#" class="hire-btn">Hire Me</a>
+</header>
+
+<section class="hero">
+<div class="hero-img">
+<img src="profile.jpg" alt="Vaneet Tanwar">
+</div>
+
+<div class="hero-content">
+<h1>
+<span>Experienced</span><br>
+Graphic Designer<br>
+& <span>Meta Ads Expert</span>
+</h1>
+
+<p>
+I help brands grow through clean graphic design and
+high-performing Meta Ads creatives with a strong
+focus on clarity and conversion.
+</p>
+
+<a href="#" class="cta">Let’s Talk</a>
 </div>
 </section>
 
+<section class="about">
+<div class="about-grid">
+<div>
+<h2>Creative Design with<br><span style="color:#0a3cff;">Refreshing Ideas</span></h2>
+
+<div class="stats">
+<div class="stat"><h3>80+</h3><p>Projects Completed</p></div>
+<div class="stat"><h3>7+</h3><p>Years Experience</p></div>
+<div class="stat"><h3>75+</h3><p>Happy Clients</p></div>
+<div class="stat"><h3>4+</h3><p>Industries Served</p></div>
+</div>
+</div>
+
+<div>
+<div class="info-box">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=400">
+<div>
+<h4>Vision</h4>
+<p>To help brands stand out with modern, clean and conversion-driven visual design.</p>
+</div>
+</div>
+
+<div class="info-box">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=400">
+<div>
+<h4>Mission</h4>
+<p>To deliver high-quality graphic design and Meta Ads creatives that generate measurable business growth.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== WHAT I DO SECTION ===== -->
+<section class="services">
+<h2>What I Do?</h2>
+
+<div class="services-grid">
+<div class="service-card">
+<img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/design--v1.png">
+<h4>Graphic Design</h4>
+<p>Creative and impactful designs that visually communicate your brand message and connect with your audience.</p>
+</div>
+
+<div class="service-card">
+<img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/pen.png">
+<h4>Meta Ads</h4>
+<p>High-converting ad creatives designed for Facebook and Instagram to boost engagement, leads, and sales.</p>
+</div>
+
+<div class="service-card">
+<img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/branding.png">
+<h4>Website Design</h4>
+<p>Modern, user-friendly, and responsive website designs focused on performance and great user experience.</p>
+</div>
+
+<div class="service-card">
+<img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/monitor.png">
+<h4>Logo Design</h4>
+<p>Unique, memorable, and timeless logo designs that represent your brand’s core values.</p>
+</div>
+
+<div class="service-card">
+<img class="service-icon" src="https://img.icons8.com/ios/50/0a3cff/logo.png">
+<h4>Branding</h4>
+<p>Complete brand identity solutions that define your brand’s personality and build strong recognition.</p>
+</div>
+
+<div class="service-cta">
+<div>
+<h4>Have a project in mind?</h4>
+<p>Let’s build something impactful together.</p>
+</div>
+<a href="#">Let’s Talk</a>
+</div>
+</div>
+</section>
 <section class="experience-wrap">
 
   <div class="exp-grid">
@@ -574,3 +734,9 @@ header{padding:16px 20px;}
 <script>
 window.addEventListener("scroll",()=>{
 document.querySelector("header")
+.classList.toggle("scrolled",window.scrollY>10);
+});
+</script>
+
+</body>
+</html>
